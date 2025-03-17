@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            background-color: #333;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 10px;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        #message-sent {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333; /* Change background color */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Use This Form to Contact Us</h1>
+    </header>
+
+    <form id="contact-form">
+        <label for="fullname">Fullname:</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="email">E-mail Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority" required>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <header>
+        <h1>If your message passes inspection, it will be displayed below:</h1>
+    </header>
+
+    <div id="message-sent" style="display: none;">
+        <h2 style="color: white;">Message Sent:</h2>
+        <p id="displayed-message"></p>
+    </div>
+
+    <script>
+        function submitForm() {
+            // Get form data
+            const fullname = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const priority = document.getElementById('priority').value;
+            const message = document.getElementById('message').value;
+
+            // Display form data in the Message Sent area
+            const displayedMessage = document.getElementById('displayed-message');
+            displayedMessage.textContent = `Fullname: ${fullname}\nE-mail: ${email}\nSubject: ${subject}\nPriority: ${priority}\nMessage: ${message}`;
+            document.getElementById('message-sent').style.display = 'block';
+
+            // Optional: You can add code here to send the form data to a server or perform additional actions.
+
+            // Reset the form
+            document.getElementById('contact-form').reset();
+        }
+    </script>
+</bo

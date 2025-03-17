@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Interests</title>
+    <style>
+        body {
+            background-color: #333;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            padding: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background-color: #555;
+            color: #ff9900;
+        }
+      
+
+        /* Styling for the fixed header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        /* Styling for the floating message box */
+        .message-box {
+            position: fixed;
+            top: 300px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border: 1px solid #fff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            z-index: 2;
+        }
+
+        /* Styling for the three-panel layout */
+        .container {
+            display: flex;
+            background-color: #333;
+            min-height: 100vh;
+            margin-top: 100px; /* Add top margin to push content below the header */
+        }
+
+        .panel {
+            flex: 1;
+            padding: 20px;
+            overflow: auto;
+        }
+
+        .panel-left {
+            background-color: #222;
+        }
+
+        .panel-right {
+            background-color: #222;
+        }
+
+      /* Different background colors for clickable links */
+      area:first-child {
+          background-color: #0078d4; /* Blue color for the first link */
+      }
+
+      area:last-child {
+          background-color: #e81123; /* Red color for the second link */
+      }
+
+    </style>
+</head>
+<body>
+    <!-- Fixed Header -->
+    <div class="header">
+        <h1>Discover My Interests</h1>
+    </div>
+
+    <!-- Floating Message Box -->
+    <div class="message-box">
+        <p>Explore the mosaic of my personal interests. They define my identity and personal journey.</p>
+    </div>
+
+    <!-- Three Panel Layout -->
+    <div class="container">
+        <div class="panel panel-left">
+            <h2>Music</h2>
+            <p>From a young age, I delved into the world of music, learning to play the violin, piano, and ukulele. These instruments have become more than mere hobbies, serving as vehicles for self-expression and comfort.</p>
+        </div>
+        <div class="panel">
+            <h2>Sports</h2>
+            <p>In addition to my love for music, I found great fulfillment in sports, including soccer, swimming, and track and field. These activities instilled in me vital life skills such as teamwork and leadership.</p>
+        </div>
+        <div class="panel panel-right">
+            <h2>Video Games</h2>
+            <p>Furthermore, I'm deeply engrossed in the world of video games, not only as a player but as a game modifier. This creative outlet allows me to express myself and fuels my aspiration to work in video game development.</p>
+        </div>
+    </div>
+
+    <!-- Image Map -->
+    <img src="dio.jpg" usemap="#image-map">
+
+    <map name="image-map">
+      <area target="" alt="Dio" title="Dio" href="dio.html" coords="0,1,1079,623"                 shape="rect">
+      <area target="" alt="Music" title="Music" href="music.html"      coords="0,622,1079,1079" shape="rect">
+  </map>
+</body>
+</html>
